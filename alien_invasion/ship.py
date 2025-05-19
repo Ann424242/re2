@@ -5,7 +5,7 @@ class Ship():
         self.screen = screen
         self.ai_settings = ai_settings
         # Загрузка изображения корабля и получение прямоугольника.
-        self.image = pygame.image.load('C:\\Users\\student\\Desktop\\Ermolina\\venv\\images\\ship.bmp')
+        self.image = pygame.image.load('C:\\re2\\images\\ship.bmp')
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
         # Каждый новый корабль появляется у нижнего края экрана.
@@ -28,3 +28,6 @@ class Ship():
     def blitme(self):
         """Рисует корабль в текущей позиции."""
         self.screen.blit(self.image, self.rect)
+    def center_ship(self):
+        """Размещает корабль в центре нижней стороны."""
+        self.center = self.screen_rect.centerx
